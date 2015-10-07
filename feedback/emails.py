@@ -12,8 +12,8 @@ def send_feedback_email(email, message):
     email_body = render_to_string('feedback/email/feedback_email_body.txt', c)
 
     email = EmailMessage(
-        email_subject, email_body, email,
-        [settings.DEFAULT_FROM_EMAIL], [],
-        headers={'Reply-To': email}
+        email_subject, email_body, settings.EMAIL_HOST_USER,
+        [email], [],
+        headers={'Reply-To': settings.EMAIL_HOST_USER}
     )
     return email.send(fail_silently=False)
