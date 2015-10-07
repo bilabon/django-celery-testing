@@ -1,0 +1,17 @@
+*.pyc
+*.DS_Store
+/.bash_history
+/.bashrc
+/.env
+/.venv
+.idea
+*.sqlite3
+*.db
+*.mo
+__pycache__
+#.pyc
+celerybeat.pid
+celerybeat-schedule
+celerybeat-schedule.db
+whoosh_index/
+*.rdb
